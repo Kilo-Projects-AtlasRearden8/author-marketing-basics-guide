@@ -1,0 +1,254 @@
+/* Author Marketing Basics Guide — Asdale Dynamics, LLC */
+/* Clean, warm, polished, local-first styles */
+
+:root {
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --bg: #ffffff;
+  --panel: #f9fafb;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --success: #047857;
+  --soft: #eff6ff;
+  --radius: 8px;
+  --max-width: 900px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: #f3f4f6;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.dek {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+.hero p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.example {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: normal;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0 2rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover { background: var(--accent-hover); }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.howto {
+  padding: 1rem 0 2rem;
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.howto h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.howto ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.howto li { margin-bottom: 0.4rem; }
+
+.credit {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.credit p { margin: 0.4rem 0; }
+.credit a { color: var(--accent); text-decoration: underline; }
+
+/* Template pages */
+.template-page { max-width: 760px; }
+.template-page h1 {
+  font-size: 1.75rem;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+.template-page h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; }
+.template-page h3 { font-size: 1.1rem; margin: 1.25rem 0 0.4rem; }
+.template-page p { margin: 0.75rem 0; color: var(--ink); }
+.template-page ul, .template-page ol { margin: 0.75rem 0 0.75rem 1.5rem; }
+.template-page li { margin-bottom: 0.35rem; }
+
+pre.code {
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+pre.code code { color: var(--ink); }
+
+/* Fillable forms */
+.form-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.form-card label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: var(--ink);
+}
+
+.form-card input, .form-card textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  margin-bottom: 0.6rem;
+}
+
+.form-card textarea { min-height: 90px; resize: vertical; }
+
+.form-actions { margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.btn-copy {
+  padding: 0.5rem 0.9rem;
+  background: var(--success);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.btn-copy:hover { background: #036a4e; }
+.btn-copy.copied { background: var(--muted); }
+
+.result {
+  margin-top: 0.75rem;
+  border: 1px dashed var(--border);
+  background: var(--soft);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  color: var(--ink);
+  display: none;
+}
+
+.small { font-size: 0.85rem; color: var(--muted); }
+.tip {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero h2 { font-size: 1.5rem; }
+  .cards { grid-template-columns: 1fr; }
+}
